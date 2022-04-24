@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Tugas</title>
+</head>
+<body>
+    <div class="container1">
+        <h2 style="text-align: center;">Data Peserta</h2>
+        <table class="table table-bordered ">
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>QR245RT</td>
+                    <td>Miya</td>
+                    <td><a class="btn btn-warning" onclick="
+                    swal('Maaf', 'Waktu edit telah selesai', 'info');
+                    ">Edit</a>
+                        <a class="btn btn-danger" onclick="showAlert()">Hapus</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>LH857IU</td>
+                    <td>Khufra</td>
+                    <td><a class="btn btn-warning" onclick="
+                    swal('Maaf', 'Waktu edit data telah selesai', 'info');
+                    ">Edit</a>
+                    <a class="btn btn-danger" onclick="showAlert()">Hapus</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>VK256TF</td>
+                <td>Kagura</td>
+                <td><a class="btn btn-warning" onclick="
+                    swal('Maaf', 'Waktu edit data telah selesai', 'info');
+                    ">Edit</a>
+                    <a class="btn btn-danger" onclick="showAlert()">Hapus</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>NL368KP</td>
+                <td>Alucard</td>
+                <td><a class="btn btn-warning" onclick="
+                    swal('Maaf', 'Waktu edit data telah selesai', 'info');
+                    ">Edit</a>
+                    <a class="btn btn-danger" onclick="showAlert()">Hapus</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</tbody>
+
+<script>
+	function showAlert() {
+		swal({
+			title: "Anda Yakin?",
+			text: "Menghapus Data!",
+			icon: "warning",
+			buttons: true,
+			dangerMode: true,
+		})
+		.then((willDelete) => {
+			if (willDelete) {
+				swal("Data Anda telah dihapus!", {
+					icon: "success",
+				});
+			} else {
+				swal("Data Anda tidak terhapus");
+			}
+		});
+	}
+
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>
